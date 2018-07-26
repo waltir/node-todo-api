@@ -7,14 +7,14 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
   console.log('Connected to MongoDB server');
   const db = client.db('TodoApp');
 
-    // // DELETE MANY
+    // DELETE MANY
     db.collection('Todos').deleteMany({
       test: 'Eat lunch'
     }).then((result) => {
       console.log(result);
     });
 
-    // // DELETE ONE
+    // DELETE ONE
     db.collection('Todos').deleteOne({
       test: 'Eat lunch'
     }).then((result) => {

@@ -10,7 +10,6 @@ Todo.remove({}).then((result) => {
 });
 
 Todo.findOneAndDelete({}).then((result) => {
-
 });
 
 Todo.findByIdAndRemove(id).then((todo) => {
@@ -18,13 +17,4 @@ Todo.findByIdAndRemove(id).then((todo) => {
     return console.log('ID not found.')
   }
   console.log('Todo by ID', todo);
-}).catch((e) => console.log(e));
-
-
-
-User.findById('5b59d1d9c717335faca3950b').then((user) => {
-  if (!user) {
-    return console.log('User ID not found.')
-  }
-  console.log('User by ID', user);
 }).catch((e) => console.log(e));
